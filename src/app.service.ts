@@ -1,8 +1,14 @@
 import { Injectable } from '@nestjs/common';
+import { User } from './user.dto';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHello(): User {
+    return {
+      email: 'a',
+      password: '',
+      roles: ['a'],
+      isEnabled: true,
+    };
   }
 }
